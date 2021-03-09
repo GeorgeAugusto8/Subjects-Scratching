@@ -7,7 +7,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-mongoose.connect(process.env.DATABASE_URI)
+mongoose.connect(`${process.env.DATABASE_URI}&w=majority`)
 
 const Professor = require('./models/professor')
 const Faculdade = require('./models/faculdade')
